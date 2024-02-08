@@ -26,7 +26,7 @@ class Complex{
     double getImag(){
         return imag;
     }
-    static double getCount(){
+    static int getCount(){
         return count;
     } 
    

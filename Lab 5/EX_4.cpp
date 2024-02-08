@@ -1,5 +1,9 @@
-//Modify the above program for constant object.
+/*Define a class Complex with members real and imag. Use a constructor to construct the
+objects of the class Complex. Using the friend function, calculate the magnitude of the
+Complex number.*/
+
 #include<iostream>
+#include<math.h>
 
 using namespace std;
 class Complex{
@@ -22,25 +26,30 @@ class Complex{
         cin>>imag;
     }
 
-    float getReal() const{
+    float getReal(){
         return real;
     }
 
-    float getImag()const{
+    float getImag(){
         return imag;
     }
 
-    void display() const{
+    void display(){
         cout<<"\nThe complex number is: "<<getReal()<<" + "<<getImag()<<"i"<<endl;
     }
+    friend double magnitude (Complex& a);
 };
 
-int main(){
-    const Complex c1(3,5);
-    c1.display();
-    
-    Complex c2(6,9);
-    c2.display();
+double magnitude(Complex& a){
+    double mag;
+    mag = sqrt(a.real * a.real + a.imag * a.imag);
+    return mag;
+}
 
-    return 0;
+int main(){
+    Complex C1(3,5);
+    double mag = magnitude(C1);
+    C1.display();
+    cout<<"The magnitude is "<<mag<<"units";
+
 }
