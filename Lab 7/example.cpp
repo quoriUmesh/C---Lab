@@ -46,8 +46,8 @@ class Test: public Student{
     
     void display(){
         Student::display();
-        cout<<"Marks obtained in\n Maths = "<<maths<<"\nOOP = "<<oop<<"\n Microprocessor = "<<microprocessor<<"\nChemistry = "<<chemistry
-            <<endl<<"ECM = "<<ecm<<endl;
+        cout<<"Marks obtained in\n Maths = "<<maths<<"\nOOP = "<<oop<<"\n Microprocessor = "
+        <<microprocessor<<"\nChemistry = "<<chemistry<<endl<<"ECM = "<<ecm<<endl;
     }
 };
 
@@ -62,7 +62,7 @@ class Result : public Test {
     }
 
     void display(){
-        cout<<endl<<endl;
+        cout<<endl;
         Test::display();
         cout<<"Total marks = "<<total<<endl;
         cout<<"Percentage obtained = "<<percentage<<endl;
